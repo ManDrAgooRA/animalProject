@@ -1,3 +1,3 @@
 export const ENDPOINTS = {
-  BREEDS: '/breeds'
-} 
+  BREEDS: '/breeds',
+}
