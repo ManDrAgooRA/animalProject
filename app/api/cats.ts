@@ -10,7 +10,9 @@ export const getCatBreedsAPI = async (): Promise<ICatBreed[]> => {
   return data
 }
 
-export const getCurrentCatBreedAPI = async (id: string): Promise<ICatBreedDetail> => {
+export const getCurrentCatBreedAPI = async (
+  id: string,
+): Promise<ICatBreedDetail> => {
   const { data } = await axiosCatInstance.get(`${ENDPOINTS.IMAGES}/${id}`)
 
   return data

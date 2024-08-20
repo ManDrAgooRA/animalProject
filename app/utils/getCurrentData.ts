@@ -1,14 +1,14 @@
-import { getCurrentCatBreedAPI } from "../api/cats";
-import { getCurrentDogBreedAPI } from "../api/dogs";
+import { getCurrentCatBreedAPI } from '../api/cats'
+import { getCurrentDogBreedAPI } from '../api/dogs'
 
 export const getCurrentData = async (id: string, animalType: string) => {
-  let currentData;
+  let currentData
 
-  if(animalType === 'cat') {
-    currentData = await getCurrentCatBreedAPI(id);
+  if (animalType === 'cat') {
+    currentData = await getCurrentCatBreedAPI(id)
   } else {
-    currentData = await getCurrentDogBreedAPI(id);
+    currentData = await getCurrentDogBreedAPI(id)
   }
 
-  return currentData;
+  return currentData
 }
