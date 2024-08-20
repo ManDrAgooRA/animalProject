@@ -22,7 +22,7 @@ const Card = async ({ imageId, breedName, isCatData }: ICard) => {
   )
 
   return (
-    <div className='rounded border-2'>
+    <div className='rounded-xl border-2 duration-300 hover:shadow-xl'>
       <Link href={`/breed/${isCatData ? 'cat' : 'dog'}/${imageId}`}>
         <div className='h-96 w-full'>
           <Image
