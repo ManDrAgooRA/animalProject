@@ -12,3 +12,12 @@ export interface IDogBreed {
   origin: string
   reference_image_id: string
 }
+
+
+export interface IDogBreedDetail {
+  breeds: IDogBreed[]
+  heigth: number;
+  id: string;
+  url: string;
+  width: number;
+}

@@ -42,3 +42,11 @@ export interface ICatBreed {
   hypoallergenic: 0
   reference_image_id: string
 }
+
+export interface ICatBreedDetail {
+  breeds: ICatBreed[]
+  heigth: number;
+  id: string;
+  url: string;
+  width: number;
+}

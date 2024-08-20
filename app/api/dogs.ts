@@ -1,4 +1,4 @@
-import { IDogBreed } from '../interfaces/dog'
+import { IDogBreed, IDogBreedDetail } from '../interfaces/dog'
 import { ENDPOINTS } from './endpoints'
 import { axiosDogInstance } from './instance'
 
@@ -10,8 +10,8 @@ export const getDogBreedsAPI = async (): Promise<IDogBreed[]> => {
   return data
 }
 
-export const getCurrentDogBreedAPI = async (id: number): Promise<IDogBreed> => {
-  const { data } = await axiosDogInstance.get(`${ENDPOINTS.BREEDS}/${id}`)
+export const getCurrentDogBreedAPI = async (id: string): Promise<IDogBreedDetail> => {
+  const { data } = await axiosDogInstance.get(`${ENDPOINTS.IMAGES}/${id}`)
 
   return data
 }
