@@ -10,7 +10,9 @@ export const getDogBreedsAPI = async (): Promise<IDogBreed[]> => {
   return data
 }
 
-export const getCurrentDogBreedAPI = async (id: string): Promise<IDogBreedDetail> => {
+export const getCurrentDogBreedAPI = async (
+  id: string,
+): Promise<IDogBreedDetail> => {
   const { data } = await axiosDogInstance.get(`${ENDPOINTS.IMAGES}/${id}`)
 
   return data

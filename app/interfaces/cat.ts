@@ -45,8 +45,8 @@ export interface ICatBreed {
 
 export interface ICatBreedDetail {
   breeds: ICatBreed[]
-  heigth: number;
-  id: string;
-  url: string;
-  width: number;
+  heigth: number
+  id: string
+  url: string
+  width: number
 }

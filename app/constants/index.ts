@@ -1,1 +1,1 @@
-export const IMAGE_QALITY = 90;
+export const IMAGE_QALITY = 90
