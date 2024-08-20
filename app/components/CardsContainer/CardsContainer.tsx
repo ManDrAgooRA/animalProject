@@ -15,7 +15,7 @@ interface ICardsContainer {
 const CardsContainer = ({ data, isCatData }: ICardsContainer) => {
   return (
     <Suspense fallback={<CardsContainerSkeleton />}>
-      <h4 className='m-6'>{isCatData ? 'Cats' : 'Dogs'}</h4>
+      <h2 className='my-8 text-5xl'>{isCatData ? 'Cats' : 'Dogs'}</h2>
       <div className='mb-6 grid gap-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5'>
         {data.map((item) => {
           return (
