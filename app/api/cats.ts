@@ -1,4 +1,4 @@
-import { ICatBreed } from '../interfaces/cat'
+import { ICatBreed, ICatBreedDetail } from '../interfaces/cat'
 import { ENDPOINTS } from './endpoints'
 import { axiosCatInstance } from './instance'
 
@@ -10,8 +10,8 @@ export const getCatBreedsAPI = async (): Promise<ICatBreed[]> => {
   return data
 }
 
-export const getCurrentDogBreedAPI = async (id: string): Promise<ICatBreed> => {
-  const { data } = await axiosCatInstance.get(`${ENDPOINTS.BREEDS}/${id}`)
+export const getCurrentCatBreedAPI = async (id: string): Promise<ICatBreedDetail> => {
+  const { data } = await axiosCatInstance.get(`${ENDPOINTS.IMAGES}/${id}`)
 
   return data
 }

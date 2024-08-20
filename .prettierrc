@@ -12,10 +12,9 @@
     "^next(.*)$",
     "^rechart(.*)$",
     "<THIRD_PARTY_MODULES>",
-    "^@/auth/(.*)$",
     "^@/config/(.*)$",
-    "^@/app/lib/(.*)$",
     "^@/app/ui/(.*)$",
+    "^@/app/components/(.*)$",
     "^[./]"
   ],
   "importOrderSeparation": true,
