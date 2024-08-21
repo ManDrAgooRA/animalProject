@@ -3,17 +3,37 @@ import { ENDPOINTS } from './endpoints'
 import { axiosCatInstance } from './instance'
 
 export const getCatBreedsAPI = async (): Promise<ICatBreed[]> => {
-  const { data } = await axiosCatInstance.get(
-    `${ENDPOINTS.BREEDS}?limit=10&pag=0`,
-  )
+  try {
+    const { data } = await axiosCatInstance.get(
+      `${ENDPOINTS.BREEDS}?limit=10&pag=0`,
+    )
 
-  return data
+    return data
+  } catch (error) {
+    let message
+
+    if (error instanceof Error) {
+      message = `getCatBreedsAPI return error with message ${error.message}`
+    }
+
+    throw new Error(message)
+  }
 }
 
 export const getCurrentCatBreedAPI = async (
   id: string,
 ): Promise<ICatBreedDetail> => {
-  const { data } = await axiosCatInstance.get(`${ENDPOINTS.IMAGES}/${id}`)
+  try {
+    const { data } = await axiosCatInstance.get(`${ENDPOINTS.IMAGES}/${id}`)
 
-  return data
+    return data
+  } catch (error) {
+    let message
+
+    if (error instanceof Error) {
+      message = `getCurrentCatBreedAPI return error with message ${error.message}`
+    }
+
+    throw new Error(message)
+  }
 }

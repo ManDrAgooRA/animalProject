@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 
 import clsx from 'clsx'
 
-import { HEADER_LINKS } from './links'
+import { HEADER_LINKS } from '../../utils/links'
 
 const Header = () => {
   const pathname = usePathname()
