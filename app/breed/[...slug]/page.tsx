@@ -27,8 +27,8 @@ const BreedPage = async ({ params }: { params: { slug: string[] } }) => {
   )
 
   return (
-    <div className='grid gap-4 p-4 md:grid-cols-6'>
-      <div className='col-span-2 h-96 w-auto border-2'>
+    <div className='grid grid-cols-6 gap-4 p-4'>
+      <div className='h-96 w-auto border-2 xs:col-span-6 lg:col-span-2'>
         <Image
           className='h-full w-full object-contain'
           src={data.url}

@@ -31,12 +31,13 @@ export const CatDetail = ({ data }: { data: ICatBreedDetail }) => {
   ]
 
   return (
-    <div className='col-span-4 p-4'>
+    <div className='p-4 xs:col-span-6 md:col-span-4'>
       <h1 className='mb-4 text-5xl font-semibold'>{name}</h1>
       {CAT_DETAIL.map((item) => {
         return (
           <p className='mb-2 w-auto' key={item.title}>
-            <span className='underline'>{item.title}</span> - {item.value}
+            <span className='underline sm:text-center'>{item.title}</span> -{' '}
+            {item.value}
           </p>
         )
       })}
