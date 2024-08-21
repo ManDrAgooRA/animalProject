@@ -7,7 +7,10 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Animal breads',
+  title: {
+    template: '%s | Animal breads',
+    default: 'Animal breads',
+  },
   description: 'This is test animal breads application',
 }
 

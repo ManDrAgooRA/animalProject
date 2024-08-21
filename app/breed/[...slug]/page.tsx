@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Metadata } from 'next'
 import Image from 'next/image'
 
 import { IMAGE_QALITY } from '@/app/constants'
@@ -9,6 +10,12 @@ import { getCurrentData } from '@/app/utils/getCurrentData'
 
 import { CatDetail } from '@/app/components/CatDetail/CatDetail'
 import { DogDetail } from '@/app/components/DogDetail/DogDetail'
+
+export const metadata: Metadata = {
+  title: 'Breed page',
+  description:
+    'In this page you can find more information about selected breed',
+}
 
 const BreedPage = async ({ params }: { params: { slug: string[] } }) => {
   const id = params.slug[1]
